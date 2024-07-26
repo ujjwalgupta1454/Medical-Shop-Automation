@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PurchaseTable = ({ items, onChange, onDelete, onAddItem, onOpenModal }) => {
+const SalesTable = ({ items, onChange, onDelete, onAddItem, onOpenModal }) => {
 
   const handleInputChange = (index, field, value) => {
     const updatedItems = [...items];
@@ -45,7 +45,7 @@ const PurchaseTable = ({ items, onChange, onDelete, onAddItem, onOpenModal }) =>
       let amount = quantity * rate;
       amount = Math.round(amount * 100) / 100; 
 
-      updatedItems[index].amount = amount.toFixed(2); 
+      updatedItems[index].amount = amount.toFixed(2);
     }
 
     onChange(updatedItems);
@@ -202,4 +202,4 @@ const PurchaseTable = ({ items, onChange, onDelete, onAddItem, onOpenModal }) =>
   );
 };
 
-export default PurchaseTable;
+export default SalesTable;
